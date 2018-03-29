@@ -15,6 +15,8 @@ services:
             - .:/elocal
         command: ping -s 4000 rt1
         tty: true
+        depends_on:
+            - rt1
         networks:
             - tnet2
     rt3:
@@ -23,6 +25,8 @@ services:
             - .:/elocal
         command: ping rt1
         tty: true
+        depends_on:
+            - rt1
         sysctls:
           - net.ipv4.icmp_echo_ignore_all=1
         networks:
@@ -34,6 +38,8 @@ services:
             - .:/elocal
         command: ping -c 1 rt3
         tty: true
+        depends_on:
+            - rt3
         networks:
             - tnet2
     tn1:
