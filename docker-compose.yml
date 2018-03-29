@@ -51,12 +51,12 @@ networks:
       ipam:
           driver: default
           config:
-              - subnet: 1.5.10.0/16
-                gateway: 1.5.10.50
+              - subnet: 1.5.10.0/30
+                gateway: 1.5.10.1
     tnet2:
       ipam:
           driver: default
           config:
-              - subnet: 1.2.3.4/16
+              - subnet: 1.2.3.0/16
                 gateway: 1.2.3.4
 
